@@ -16,26 +16,28 @@ public class Student {
     private String gpa;
 
     @Column
-    private String group;
-
-    public String getGroup() {
-        return group;
-    }
-
-    public void setGroup(String group) {
-        this.group = group;
-    }
-
-    public double getAttendance() {
-        return attendance;
-    }
-
-    public void setAttendance(double attendance) {
-        this.attendance = attendance;
-    }
+    private String groupa;
 
     @Column
-    private double attendance;
+    private String attendancea;
+
+    public String getGroupa() {
+        return groupa;
+    }
+
+    public void setGroupa(String group) {
+        this.groupa = group;
+    }
+
+    public String getAttendancea() {
+        return attendancea;
+    }
+
+    public void setAttendancea(String attendance) {
+        this.attendancea = attendance;
+    }
+
+
 
     public Long getId() {
         return id;
