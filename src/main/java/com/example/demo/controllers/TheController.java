@@ -24,15 +24,19 @@ public class TheController {
     }
     @GetMapping("/index")
     public String main(Model model) {
-        model.addAttribute("students", studentRepository.findAll());
+        model.addAttribute("students", studentRepository.findAllByAttendanceLike("%12%"));
         return "index";
     }
     @PostMapping("/index")
-    public String postMain(@ModelAttribute Student student, Model model){
-        Student student1 = student;
-        studentRepository.save(student1);
-        model.addAttribute("students", studentRepository.findAll());
+    public String postMain(Model model){
 
-        return "index";
+
+
+        return "redirect:/index";
     }
+
+/*    @Override
+    public String getCreateSql(){
+
+    }*/
 }

@@ -10,11 +10,9 @@
 <body>
 <div class="button_div">
 
-  <form method="post" action="/index" th:action="@{/index}" th:object="${student}">
-    <input type="text" class="form-control"  placeholder="name">
-    <input type="text" class="form-control"  placeholder="gpa">
+  <form method="post" action="/index" th:action="@{/index}">
     <div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Add</button>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sort</button>
     </div>
   </form>
 
@@ -26,6 +24,8 @@
     <th scope="col">#</th>
     <th scope="col">Name</th>
     <th scope="col">GPA</th>
+    <th scope="col">Attendance</th>
+    <th scope="col">Group</th>
   </tr>
   </thead>
   <tbody>
@@ -33,6 +33,8 @@
     <td th:text="${student.id}"></td>
     <td th:text="${student.name}"></td>
     <td th:text="${student.gpa}"></td>
+    <td th:text="${student.attendance}"></td>
+    <td th:text="${student.group}"></td>
   </tr>
   </tbody>
 </table>
