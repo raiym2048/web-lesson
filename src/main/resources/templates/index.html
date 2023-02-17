@@ -9,7 +9,11 @@
 <body>
 <div class="button_div">
 
-  <form method="post" action="/index" th:action="@{/index}">
+  <form method="post" action="/index" th:action="@{/index}" th:object="${students}">
+    <input type="text" name="name">
+    <input type="text" name="gpa">
+    <input type="text" name="attendance">
+    <input type="text" name="group">
     <div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sort</button>
     </div>

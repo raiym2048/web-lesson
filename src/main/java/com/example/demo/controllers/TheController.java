@@ -7,10 +7,11 @@ import org.h2.engine.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 public class TheController {
@@ -28,7 +29,13 @@ public class TheController {
         return "index";
     }
     @PostMapping("/index")
-    public String postMain(Model model){
+    public String postMain(@Valid @ModelAttribute("students") Student student, BindingResult errors , Model model){
+
+        if (errors.hasErrors()) {
+            return "redirect:/index";
+        }
+            studentRepository.save(student);
+
 
 
 
