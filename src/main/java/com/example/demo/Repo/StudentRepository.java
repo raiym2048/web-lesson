@@ -17,6 +17,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 List<Student> findAllByPrice(double gpa, Pageable pageable);
 */
     List<Student> findByGpaGreaterThanOrderByGpaDesc(String gpa);
+    List<Student> OrderByAttendance();
    /* List<Student> findByNameLike(String name);*/
     //List<Student> findByAttendanceLike(String attendance);
 
