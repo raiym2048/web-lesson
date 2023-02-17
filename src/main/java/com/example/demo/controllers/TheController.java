@@ -24,7 +24,7 @@ public class TheController {
     }
     @GetMapping("/index")
     public String main(Model model) {
-        model.addAttribute("students", studentRepository.findByAttendanceLike("%12%"));
+        model.addAttribute("students", studentRepository.findAll());
         return "index";
     }
     @PostMapping("/index")

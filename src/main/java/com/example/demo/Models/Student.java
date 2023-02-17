@@ -13,29 +13,30 @@ public class Student {
     private String name;
 
     @Column
-    private String gpa;
+    private int gpa;
 
     @Column
-    private String groupa;
+    private  String group;
 
     @Column
-    private String attendancea;
+    private String attendance;
 
-    public String getGroupa() {
-        return groupa;
+    public String getGroup() {
+        return group;
     }
 
-    public void setGroupa(String group) {
-        this.groupa = group;
+    public void setGroup(String group) {
+        this.group = group;
     }
 
-    public String getAttendancea() {
-        return attendancea;
+    public String getAttendance() {
+        return attendance;
     }
 
-    public void setAttendancea(String attendance) {
-        this.attendancea = attendance;
+    public void setAttendance(String attendance) {
+        this.attendance = attendance;
     }
+
 
 
 
@@ -55,11 +56,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getGpa() {
+    public int getGpa() {
         return gpa;
     }
 
-    public void setGpa(String gpa) {
+    public void setGpa(int gpa) {
         this.gpa = gpa;
     }
 
