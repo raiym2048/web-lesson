@@ -2,6 +2,8 @@ package com.example.demo.Models;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.NotNull;
+
 @Entity
 public class Student {
 
@@ -9,15 +11,21 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+
+    @NotNull(message = "User's name cannot be null.")
     @Column
     private String name;
 
+    @NotNull(message = "User's name cannot be null.")
     @Column
     private int gpa;
 
+    @NotNull(message = "User's name cannot be null.")
     @Column
     private  String group;
 
+    @NotNull(message = "User's name cannot be null.")
     @Column
     private String attendance;
 
