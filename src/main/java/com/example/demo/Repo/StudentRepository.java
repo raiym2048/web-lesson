@@ -18,6 +18,7 @@ List<Student> findAllByPrice(double gpa, Pageable pageable);
 */
     List<Student> findByGpaGreaterThanOrderByGpaDesc(String gpa);
     List<Student> OrderByAttendance();
+    public List<Student> findByNameLike(String name);
    /* List<Student> findByNameLike(String name);*/
     //List<Student> findByAttendanceLike(String attendance);
 
