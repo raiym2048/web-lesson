@@ -8,6 +8,7 @@
 ![image](https://user-images.githubusercontent.com/76080041/222411968-1b42405d-5b08-416a-b943-1f403bb3dd26.png)
 
 
-here we can sort and add new student:
+here we can sort and add new student(sorting by attendance):
+
 ![image](https://user-images.githubusercontent.com/76080041/222412113-1c95cf28-a33c-4be6-89ff-3b95620118aa.png)
 
